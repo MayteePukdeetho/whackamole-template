@@ -6,8 +6,9 @@ import random
 def main():
     try:
         #test
-        x = random.randrange(1, 17)
-        y = random.randrange(1, 21)
+        x = random.randrange(0, 19)
+        y = random.randrange(0, 16)
+        print(x, y)
 
         pygame.init()
         screen = pygame.display.set_mode((640, 512))
@@ -46,8 +47,9 @@ def main():
                                 correct_row = True
                     if correct_row == True and correct_column == True:
                         print("correct row and column")
-                        x = random.randrange(1, 17)
-                        y = random.randrange(1, 21)
+                        x = random.randrange(0, 19)
+                        y = random.randrange(0, 16)
+                        print(x, y)
                         draw_grid()
                         screen.blit(mole_image, mole_image.get_rect(topleft=(x * 32, y * 32)))
             screen.fill("light green")
